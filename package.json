@@ -1,0 +1,14 @@
+{
+  "name": "node-together",
+  "version": "0.0.1",
+  "bin": {
+    "node-together": "cli.js"
+  },
+  "dependencies": {
+    "copy-paste": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "multimatch": "^2.1.0",
+    "node-uuid": "^1.4.7",
+    "socket.io": "^1.4.5"
+  }
+}
