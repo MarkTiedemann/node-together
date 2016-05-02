@@ -1,7 +1,7 @@
 
 # node-together
 
-**CLI tool for easy, one-time sharing of [Node](https://nodejs.org) projects.**
+**CLI app for easy, one-time sharing of [Node](https://nodejs.org) projects.**
 
 ## Installation
 
