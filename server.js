@@ -1,6 +1,6 @@
 'use strict'
 
-const io = require('socket.io')()
+const io = require('socket.io')(4000)
 const logger = require('winston')
 const uuid = require('node-uuid')
 const map = new Map()
@@ -43,5 +43,3 @@ io.on('connection', socket => {
     })
 
 })
-
-io.listen(4000)
