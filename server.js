@@ -12,20 +12,29 @@ io.on('connection', socket => {
         socket.emit('send-session-id', id)
     })
 
+    socket.on('error', err => {
+        console.log(err)
+    })
+
     socket.on('start-session', id => {
 
         const session = map.get(id)
 
-        session.emit('start-session')
-
         session.on('file', file => {
             socket.emit('file', file)
+        })
+
+        session.on('error', err => {
+            console.log(err)
         })
 
         session.on('stop-session', () => {
             socket.emit('stop-session')
             map.delete(id)
         })
+
+        session.emit('start-session')
+
     })
 
 })

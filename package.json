@@ -1,13 +1,17 @@
 {
   "name": "node-together",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "bin": {
     "node-together": "cli.js"
   },
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
     "copy-paste": "^1.2.0",
-    "mkdirp": "^0.5.1",
-    "multimatch": "^2.1.0",
+    "fs-extra": "^0.30.0",
+    "glob": "^7.0.3",
+    "minimist": "^1.2.0",
     "node-uuid": "^1.4.7",
     "socket.io": "^1.4.5"
   }

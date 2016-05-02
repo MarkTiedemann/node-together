@@ -1,34 +1,26 @@
 
 # node-together
 
-**CLI tool for easily sharing [Node](https://nodejs.org) projects.**
+**CLI tool for easy, one-time sharing of [Node](https://nodejs.org) projects.**
 
 ## Installation
 
-`npm install --global node-together`
+`npm i -g node-together`
 
 ## Usage
 
 **copy**
 
-- **default**: `node-together copy`: copies the current directory and all sub-directories, excluding the `node_modules` folder, and copies the `session-id` to the clipboard
-- **with directory and file matching**: `node-together copy '*' '!node_modules' '!.git' '!private.config'`
-- **without clipboard**: `node-together copy --no-clipboard`
+- **default**: `node-together copy`: selects the current directory and all sub-directories, excluding dotfiles and the `node_modules` folder, and copies the `session-id` to the clipboard
+- **with directory and file matching**: `node-together copy --include '{**,.gitignore}' --exclude '{dist/**,node_modules/**}'`: includes the `.gitignore` file and excludes the `dist` folder
+- **without clipboard**: `node-together copy --no-clipboard`: does not copy the `session-id` to the clipboard but instead writes it to `stdout`
 - **with your own server**: `node-together copy --server ws://example.com`
 
 **paste**
 
 - **default**: `node-together paste`: retrieves the `session-id` from the clipboard and pastes the corresponding files into the current directory
-- **without clipboard**: `node-together paste 50M3-R4ND0M-5355l0-lD`
+- **without clipboard**: `node-together paste --session-id SUP3R-R4ND0M-5355l0-lD`
 - **with your own server**: `node-together paste --server ws://example.com`
-
-## Todos
-
-- [ ] host `node-together` on the `maju.systems` server
-- [ ] add `--server` option
-- [ ] add tests
-- [ ] add logging
-
 
 ## License
 
