@@ -1,6 +1,6 @@
 {
   "name": "node-together",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "bin": {
     "node-together": "cli.js"
   },
@@ -13,7 +13,7 @@
   "dependencies": {
     "copy-paste": "^1.2.0",
     "fs-extra": "^0.30.0",
-    "glob": "^7.0.3",
+    "glob-plus": "0.0.2",
     "minimist": "^1.2.0",
     "node-uuid": "^1.4.7",
     "socket.io": "^1.4.5",
@@ -27,12 +27,11 @@
     "url": "git+https://github.com/MarkTiedemann/node-together.git"
   },
   "keywords": [],
-  "author": "marktiedemann <www.marktiedemann@gmail.com>",
+  "author": "Mark Tiedemann <www.marktiedemann@gmail.com>",
   "license": "WTFPL",
   "bugs": {
     "url": "https://github.com/MarkTiedemann/node-together/issues"
   },
-  "homepage": "https://github.com/MarkTiedemann/node-together#readme",
-  "main": "server.js",
-  "devDependencies": {}
+  "homepage": "https://github.com/MarkTiedemann/node-together",
+  "main": "server.js"
 }
